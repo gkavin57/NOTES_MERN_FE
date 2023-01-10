@@ -2,11 +2,9 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-
 function Navbar() {
+  let name = window.localStorage.getItem("username");
 
-  let name = window.localStorage.getItem("username")
- 
   return (
     <>
       <nav
@@ -14,12 +12,11 @@ function Navbar() {
         style={{ position: "sticky" }}
       >
         <div className="container-fluid">
-      
           <a className="navbar-brand " href="#" id="kir">
-            <span id="kiru">Notes </span>
-            <span className="">Maker</span>
+            <span>Notes </span>
+            <span>Zipper</span>
           </a>
-         
+
           <button
             className="navbar-toggler"
             id="navBut"
@@ -37,10 +34,13 @@ function Navbar() {
             className="collapse navbar-collapse justify-content-end"
             id="navbarNav"
           >
-             
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/portal/home">
+                <a
+                  className="nav-link active"
+                  aria-current="page"
+                  href="/portal/home"
+                >
                   Home
                 </a>
               </li>
@@ -49,29 +49,27 @@ function Navbar() {
                   Create Note
                 </a>
               </li>
-           
-             
+
               <li className="nav-item dropdown">
-          <img
-            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-            className=" nav-link dropdown-toggle rounded-circle"
-            style={{height :'3rem',width:'3rem'}}
-            alt="Black and White Portrait of a Man"
-            loading="lazy"
-            
-            id="navbarDarkDropdownMenuLink"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          />
-               
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                  className=" nav-link dropdown-toggle rounded-circle"
+                  style={{ height: "3rem", width: "3rem" }}
+                  alt="Black and White Portrait of a Man"
+                  loading="lazy"
+                  id="navbarDarkDropdownMenuLink"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                />
+
                 <ul
                   className="dropdown-menu dropdown-menu-dark"
                   aria-labelledby="navbarDarkDropdownMenuLink"
                 >
                   <li>
                     <Link className="dropdown-item" to="/portal/profile">
-                     {name}
+                      {name}
                     </Link>
                   </li>
                   <li>
@@ -82,7 +80,6 @@ function Navbar() {
                 </ul>
               </li>
             </ul>
-           
           </div>
         </div>
       </nav>

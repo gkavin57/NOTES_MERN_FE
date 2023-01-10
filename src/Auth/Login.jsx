@@ -116,8 +116,8 @@ function Login() {
                   <div className="text-center">
                     <strong>For Testing</strong>
                     <br />
-                    <h6>Email: kirubaharan8878m@gmail.com</h6>
-                    <h6>Pass: User@1234</h6>
+                    <h6>Email : test@gmail.com</h6>
+                    <h6>Password: 12345678</h6>
                   </div>
                 </div>
               </div>
