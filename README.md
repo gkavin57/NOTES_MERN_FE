@@ -1,2 +1,2 @@
-<h2>NOTES MAKER MERN App</h2>
+<h2>NOTES ZIPPER MERN App</h2>
 
